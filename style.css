@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font: 16px sans-serif;
+}
+.banner {
+    padding: 50px calk(50% - 660px) 40px;
+    box-sizing: border-box;
+    background: url(img/Background.png) center / cover no-repeat; /* путь  repeat position / size repeat */
+}
+
+
+
+
+
+
+/*home work*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 680px;
+    height: 40px;
+    margin-left: -340px;
+    left: 50%;
+    top: 50px;
+    /*background-color: rgb(138, 77, 77); /*удалить*/
+    z-index: 1;
+}
+.header__div {
+ /*background-color: blue; /*удалить*/
+    height: 100%;
+    cursor: pointer;
+}
+.header__menu-text h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
+}
+.header__button {
+    background: #B7EAAF;
+    border-radius: 10px;
+}
+.header__button h3 {
+    text-align: justify;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 15px 0px 15px;
+    margin: auto;
+}
+.banner__text {
+    position: absolute;
+    top: 200px;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+    /*background-color: #355342; /*удалить*/
+    padding: 0;
+}
+.banner__text-up {
+    color: #fff;
+    font-size: 64px;
+    line-height: 76px;
+    weight: 600; 
+    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+.banner__text-dwn {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    weight: 400;
+    line-height: 39px;
+    margin-top: 40px;
+}
+.banner__text-up1 {
+    color: #d1e7cef5;
+}
+.banner__text-up2 {
+    color: #B7EAAF;
+}
+.banner__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+.banner__icons-dwn {
+    position: absolute;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: 90px; 
+}
+
+
+
+
+
+
+
+
+main {
+    background-color: #fff;
+    padding: 40px calc(50% - 660px);
+    display: grid;
+    grid-template-columns: repeat(4, 1ft);
+    gap: 40px;
+}
+
+.main__caption {
+    font-size: 60px;
+    color: #355342;
+    text-align: center;
+    grid-column-end: span 4;
+}
+.main__item {
+    /* width: 300px; */
+    height: 225px;
+    padding: 24px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    /* backdrop-filter: 5px; */
+}
+.main__item h3 {
+    font-size: 30px;
+    width: 100%;
+    margin: 0;
+}
+.main__item img {
+    height: 30px;
+}
+.main__item-text {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+/* @media (max-width: 1399px)
+@media (max-width: 475px) 
+или
+mobile first
+сперва верстка для мою
+*/
+
+@media (max-width: 475px){
+    .banner {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+        grid-template-columns: 1ft;
+        gap: 30px;
+    }
+    .main__caption{
+        grid-column-end: span 1;
+        font-size: 50px;
+    }
+}
+@media (min-width: 476px) and (max-width: 1399px){
+    .banner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    main {
+        padding-left: 40px;
+        padding-right: 40px;
+        grid-template-columns: 1ft;
+        gap: 30px;
+        grid-template-columns: 1ft 1fr;
+    }
+    .main__caption{
+        grid-column-end: span 2;
+    }
+}
